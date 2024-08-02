@@ -1,0 +1,31 @@
+.table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Add vertical scrolling */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .flight-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .flight-table th, .flight-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .flight-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .flight-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .flight-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

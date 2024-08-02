@@ -1,32 +1,42 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-// import './FlightList.css'; // Add your styles
+import './searchResults.css'; 
+// import './Flig.css'; // Add your styles
 
 const SearchResults= () => {
   const location = useLocation();
   const { flights } = location.state || { flights: [] };
 
   return (
-    <div className="flight-list">
-      <h1 className="main-heading">Flight Results</h1>
-      <div className="flight-container">
-        {flights.length === 0 ? (
-          <p>No flights found</p>
-        ) : (
-          <ul className="flight-results">
-            {flights.map((flight, index) => (
-              <li key={index}>
-                <div className="flight-info">
-                  <p><strong>Flight:</strong> {flight.name}</p>
-                  <p><strong>Departure:</strong> {flight.departure}</p>
-                  <p><strong>Arrival:</strong> {flight.arrival}</p>
-                  <p><strong>Price:</strong> {flight.price}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="table-container">
+      <table className="flight-table">
+        <thead>
+          <tr>
+            <th>Flight Number</th>
+            <th>Flight Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Travel Date</th>
+            <th>Price</th>
+            <th>StartTime</th>
+            <th>ReachTime</th>
+          </tr>
+        </thead>
+        <tbody>
+          {flights.map((flight, index) => (
+            <tr key={index}>
+              <td>{flight.flightNumber}</td>
+              <td>{flight.flightName}</td>
+              <td>{flight.source}</td>
+              <td>{flight.destination}</td>
+              <td>{flight.travelDate}</td>
+              <td>{flight.price}</td>
+              <td>{flight.startTime}</td>
+              <td>{flight.reachTime}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
