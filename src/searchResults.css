@@ -1,31 +1,180 @@
-.table-container {
-    max-height: 400px; /* Adjust the height as needed */
-    overflow-y: auto; /* Add vertical scrolling */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+body {
+  background-color: white;
+  /* display: flex; */
+}
+
+.search-results-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.filters-section {
+  width: 300px; 
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  /* box-sizing: border-box; */
+  border: 1px solid rgb(70, 70, 124); /* Added border */
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-bottom-width: 5px;
+}
+
+.flight-duration span {
+  margin-right: 80px;
+  font-size: 14px;
+  color: #555;
+}
+.no-flights-message {
   
-  .flight-table {
-    width: 100%;
-    border-collapse: collapse;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center the text */
+  color: black; /* Optional: Change text color */
+  margin: 0; /* Remove margin to center correctly */
+  padding: 20px; /* Add padding for spacing */
+  background-color: #ffffff; /* Ensure background color matches */
+  width: 100%; /* Ensure the message width is 100% for centering */
+  height: auto /* Optional: Add some margin */
+}
+
+  .blue-line {
+    border-top: 2px solid green; /* Creates a green line */
+    margin: 10px 0; /* Optional: Adds space around the line */
+    height: 0; /* Height should be 0 to only show the border */
+    width: 60%; /* Adjust this value to control the line length */
   }
-  
-  .flight-table th, .flight-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .flight-table th {
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .flight-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .flight-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+
+.applied-filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.clear-filters-link {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.applied-filters-container {
+  margin-bottom: 20px;
+}
+
+.applied-filters-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.applied-filters-container li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.filters-container h3 {
+  margin-bottom: 15px;
+}
+
+.filters-container div {
+  margin-bottom: 10px;
+}
+
+.flights-container {
+  flex: 1;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-left: 10px;
+}
+
+.flight-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top-width: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  gap: 0px;
+  border: 1px solid lightblue; /* Added border */
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-right-width: 10px;
+  border-left-width: 5px;
+
+}
+
+
+.flight-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.flight-logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.flight-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.flight-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.flight-number {
+  font-size: 14px;
+  color: #888;
+}
+
+.flight-time, .flight-duration, .flight-price {
+  text-align: center;
+  flex: 1;
+}
+
+.start-time, .reach-time {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.source-city, .destination-city {
+  font-size: 14px;
+  color: #888;
+}
+
+
+
+.flight-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.prp {
+  font-size: 10px;
+  color: #888;
+}
+
+.book-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
