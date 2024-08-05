@@ -94,20 +94,34 @@ const SearchResults = () => {
   const handleFormSubmit = async (travelerName, flight) => {
     try {
       // Hit the API with the flight and traveler details
-      await fetch('/api/updateFlightStatus', {
+      const response =await fetch('http://localhost:8001/booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          flightId: flight.id,
+          flightId: flight.flightId,
           userName: travelerName,
           status: 'initiated'
         }),
-      });
+      }
+     
+    );
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const result = await response.json();
 
       // Navigate to another page with flight data
-      navigate('/bookingScreen', { state: { flight, travelerName } });
+      navigate('/bookingscreen', { 
+        state: { 
+          flight, 
+          SR:result,
+          travelerName, 
+          formattedDate: location.state?.formattedDate,
+          dayOfWeek: location.state?.dayOfWeek
+        } 
+      });
 
       alert(`Booking initiated for ${travelerName}!`);
     } catch (error) {

@@ -1,23 +1,23 @@
-/* src/FlightCard.css */
-.flight-card {
+
+.bsflight-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 50px;
     max-width: 1000px;
-    margin: 200px auto;
+    margin:  auto;
     font-family: Arial, sans-serif;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header {
+.bsheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.footer {
+.bsfooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +25,7 @@
     
 }
 
-.footer .total-amount {
+.bsfooter .bstotal-amount {
     font-style: initial; 
     font-weight: bold; 
     color: hsl(0, 100%, 0%);  
@@ -35,36 +35,36 @@
     
 }
 
-.route {
+.bsroute {
     font-size: 18px;
     font-weight: bold;
 }
 
-.date, .duration, .total-amount {
+.bsdate, .bsduration, .bstotal-amount {
     font-size: 14px;
     color: #4d4a4a;
     font-style: oblique;
     
 }
-.vdld{
+.bsvdld{
  margin-left: 0px;
 }
 
-.duration{
+.bsduration{
   margin-left: 20px;
   margin-top: 15px;
   display: inline-block;
 }
 
-.vertical-dotted-line {
-    border-left: 2px dotted #888;  /* Dotted line with color blue */
-    height: 40px;                 /* Height of the line */
+.bsvertical-dotted-line {
+    border-left: 2px dotted #888; 
+    height: 40px;               
     margin-left: 60px; 
     margin-top: 0px;
               
   }
 
-.flight-info {
+.bsflight-info {
     border-top: 1px solid #b1afaf23;
     border-bottom: 1px solid #b1afaf23;
     padding: 20px 0;
@@ -73,32 +73,32 @@
     
 }
 
-.airline {
+.bsairline {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
     margin-top: 7px;
 }
 
-.airline-logo {
+.bsairline-logo {
     width: 32px;
     height: 32px;
     margin-right: 8px;
 }
 
-.flight-number {
+.bsflight-number {
     font-size: 16px;
     font-weight: bold;
     margin-left: 10px;
 }
 
-.aircraft {
+.bsaircraft {
     font-size: 14px;
     color: #888;
     margin-left: 10px;
    
 }
-.circle {
+.bscircle {
     width: 6px;
     height: 6px;
     border: 1px solid #000;
@@ -107,53 +107,53 @@
 }
 
 
-.flight-times {
+.bsflight-times {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
 }
 
-.departure, .arrival {
+.bsdeparture, .bsarrival {
     font-size: 14px;
     margin-bottom: 8px;
 }
 
-.time-location {
+.bstime-location {
     display: flex;
     align-items: center;
 }
 
-.time {
+.bstime {
     font-size: 16px;
     font-weight: bold;
     margin-right: 8px;
 }
 
-.location {
+.bslocation {
     font-size: 14px;
     color: #888;
 }
-.baggage {
+.bsbaggage {
     border-top: 1px solid #08020257;
     display: flex;
     justify-content: space-between;
 }
 
-.baggage .cabin {
+.bsbaggage .bscabin {
     margin-top: 5px;
     margin-left: 50px;
 
 }
-.baggage .check-in {
+.bsbaggage .bscheck-in {
     margin-top: 5px;
     margin-right: 35px;
 }
 
-.cabin, .check-in {
+.bscabin, .bscheck-in {
     font-size: 14px;
 }
 
-.pay-button {
+.bspay-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -166,6 +166,6 @@
    
 }
 
-.pay-button:hover {
+.bspay-button:hover {
     background-color: #0056b3;
 }

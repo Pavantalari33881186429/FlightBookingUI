@@ -1,0 +1,165 @@
+.payment-container {
+    display: flex;
+    width: 800px;
+    margin-left: 50px;
+    
+  }
+  
+  .payment-methods {
+    width: 30%;
+    padding: 10px;
+    border-right: 1px solid #a8831e;
+  }
+  
+  .payment-methods ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .payment-methods li {
+    padding: 10px 0;
+    border-bottom: 1px solid #af6a10;
+    cursor: pointer;
+  }
+  
+  .payment-methods .active {
+    background-color: green;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .payment-form {
+    margin-left: 100px;
+    width: 70%;
+    padding: 20px;
+    
+  }
+  .card-image img {
+    width: 200px; /* Adjust the width as needed */
+    height: 100px; /* Maintain aspect ratio */
+    display: block; /* Ensures it stays within the container */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .expiry {
+    width: 65%;
+  }
+  
+  .expiry-date {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cvv {
+    width: 30%;
+    position: relative;
+  }
+  
+  .cvv .info-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .save-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .save-info input {
+    margin-right: 10px;
+  }
+  
+  .pay-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .pay-button:hover {
+    background-color: green; /* Change background color on hover */
+    color: white; /* Optionally, change text color on hover */
+  }
+  
+.cancel-button{
+    margin-top: 15px;
+    
+    width: 100%;
+    /* padding: 15px; */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display:inline-block;
+}
+
+.cancel-button:hover{
+   
+        background-color: rgb(150, 32, 32) ;/* Change background color on hover */
+        color: white; /* Optionally, change text color on hover */
+      
+}
+  
+  
+  .price-view {
+    margin-right: 0px;
+    font-weight: bold;
+  }
+  
+  .pay-button p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .go-back {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+    text-decoration: none;
+  }
+ 
+  .go-back:hover {
+    text-decoration: underline;
+  }
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+    

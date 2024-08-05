@@ -142,7 +142,13 @@ const SearchFlights = () => {
         throw new Error('Network response was not ok');
       }
       const result = await response.json();
-      navigate('/flightlist', { state: { flights: result } });
+      navigate('/flightlist', { 
+        state: { 
+          flights: result,
+          formattedDate: formattedDate,
+          dayOfWeek: dayOfWeek
+        } 
+      });
     } catch (error) {
       console.error('Error:', error);
     }
