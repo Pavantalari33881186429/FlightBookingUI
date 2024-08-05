@@ -137,6 +137,7 @@ const ProcessingScreen = () => {
     <div className="processing-container">
       <p>Transaction is in process...</p>
       <div className="spinner"></div> 
+      <div> {price}</div>
     </div>
   );
 };
