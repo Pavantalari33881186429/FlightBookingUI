@@ -8,19 +8,21 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const BookingScreen = () => {
   // Retrieve state from location
   const { state } = useLocation();
-  const { flight,SR, travelerName, formattedDate, dayOfWeek } = state || {};
+  const { flight,SR, travelerName, formattedDate, dayOfWeek ,logo} = state || {};
   const navigate = useNavigate();
   if (!flight) {
     return <div className="error">No flight details available</div>;
   }
   
-  const { startTime, reachTime, source, destination, price, flightName, flightNumber } = flight;
-  const handlePaymentClick=async(SR,price)=>{
+  const { startTime, reachTime, source, destination, price, flightName, flightNumber,travelDate,sourceAirport,destinationAirport } = flight;
+  const handlePaymentClick=async(SR,price,flight,formattedDate, dayOfWeek)=>{
     navigate('/paymentscreen', { 
         state: {  
           SR,
           travelerName,
-          price
+          price,
+          flight,formattedDate, dayOfWeek
+          
         } 
       });
   }
@@ -33,7 +35,8 @@ const BookingScreen = () => {
       <div className="bsdate">{`${dayOfWeek}, ${formattedDate} - ${calculateDuration(startTime, reachTime)}`}</div>
       </div>
       <div className="bsairline">
-        <FontAwesomeIcon icon={faPlane} style={{ color: 'Highlight' }} />
+        {/* <FontAwesomeIcon icon={faPlane} style={{ color: 'Highlight' }} /> */}
+        <img src={logo} alt='NO IMAGE' className="bsflight-logo" />
         <div className="bsflight-number">{`${flightName} ${flightNumber}`}</div>
         <div className="bsaircraft"><button className="bscraft">Airbus A320 N</button></div>
       </div>
@@ -69,7 +72,7 @@ const BookingScreen = () => {
         </div>
       </div>
       <div className="bsfooter">
-        <button className="bspay-button"  onClick={() => handlePaymentClick(SR,price)}>PROCEED TO PAY</button>
+        <button className="bspay-button"  onClick={() => handlePaymentClick(SR,price,flight,formattedDate, dayOfWeek)}>PROCEED TO PAY</button>
         <div className="bstotal-amount">{`Total Amount: ₹${price}`}</div>
       </div>
     </div>
@@ -87,4 +90,3 @@ const calculateDuration = (startTime, reachTime) => {
 };
 
 export default BookingScreen;
-

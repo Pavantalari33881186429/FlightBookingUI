@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './failureScreen.css';
 const FailureScreen = () => {
   return (
     <div className="failure-container">
-      <h2>Payment Failed</h2>
-      <p>Unfortunately, your payment could not be processed. Please try again.</p>
-    </div>
+    <h1 className="failure-message">Unfortunately, your payment could not be processed. Please try again.</h1>
+    <a href="/" className="home-link">Go to Home</a>
+  </div>
   );
 };
 

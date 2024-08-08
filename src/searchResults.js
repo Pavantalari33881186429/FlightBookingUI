@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './searchResults.css'; 
@@ -83,15 +82,15 @@ const SearchResults = () => {
            (price >= minPrice && price <= maxPrice);
   });
 
-  const handleBookClick = (flight) => {
+  const handleBookClick = (flight,logo) => {
     setSelectedFlight(flight);
     const travelerName = window.prompt("Enter traveller name:");
     if (travelerName) {
-      handleFormSubmit(travelerName, flight);
+      handleFormSubmit(travelerName, flight,logo);
     }
   };
 
-  const handleFormSubmit = async (travelerName, flight) => {
+  const handleFormSubmit = async (travelerName, flight,logo) => {
     try {
       // Hit the API with the flight and traveler details
       const response =await fetch('http://localhost:8001/booking', {
@@ -115,11 +114,12 @@ const SearchResults = () => {
       // Navigate to another page with flight data
       navigate('/bookingscreen', { 
         state: { 
-          flight, 
+          flight,
           SR:result,
           travelerName, 
           formattedDate: location.state?.formattedDate,
-          dayOfWeek: location.state?.dayOfWeek
+          dayOfWeek: location.state?.dayOfWeek,
+          logo
         } 
       });
 
@@ -232,11 +232,13 @@ const SearchResults = () => {
                 <div className="flight-duration">
                   <div className="duration-bar" style={{ width: calculateDurationWidth(flight.startTime, flight.reachTime) }}></div>
                   <span>{calculateDuration(flight.startTime, flight.reachTime)}</span>
+                  <div className='blue-line'></div>
                 </div>
 
                 <div className="flight-time">
                   <div className="reach-time">{flight.reachTime}</div>
                   <div className="destination-city">{flight.destination}</div>
+                  
                 </div>
 
                 <div className="flight-price">
@@ -244,7 +246,7 @@ const SearchResults = () => {
                   <div className="prp">per adult</div>
                 </div>
 
-                <button className="book-button" onClick={() => handleBookClick(flight)}>Book</button>
+                <button className="book-button" onClick={() => handleBookClick(flight,logo)}>Book</button>
               </div>
             );
           })

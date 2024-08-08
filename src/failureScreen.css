@@ -1,0 +1,26 @@
+.failure-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .failure-message {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .home-link:hover {
+    text-decoration: underline;
+  }
+  

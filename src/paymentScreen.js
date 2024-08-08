@@ -6,7 +6,7 @@ import card from './logos/card.PNG';
 
 const PaymentScreen = () => {
   const { state } = useLocation();
-  const { SR, price } = state || {};
+  const { SR,flight,price,formattedDate, dayOfWeek} = state || {};
   const navigate = useNavigate();
 
   // State to track the selected payment method
@@ -41,7 +41,11 @@ const PaymentScreen = () => {
             username: SR.username,
             modeOfPayment: selectedPaymentMethod,
             amount: price,
-            status: SR.status
+            status: SR.status,
+            flight,
+            SR,
+            formattedDate, dayOfWeek
+        
           },
         });
       }

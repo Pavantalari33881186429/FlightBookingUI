@@ -1,0 +1,114 @@
+
+.boarding-pass {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section, .right-section {
+  width: 48%;
+}
+
+.left-section {
+  border-right: 2px solid #ddd;
+  padding-right: 20px;
+}
+
+.passenger-name strong, .flight-no strong, .flight-date strong, .boarding-time strong, 
+.seat strong, .airport strong, .gate strong, .booking-ref strong, .flight-name strong,  .reach-time strong, .price strong{
+  color:grey;
+  font-size: 12px;
+}
+
+.passenger-name p, .flight-no p, .flight-date p, .boarding-time p, .seat p, 
+.airport p, .gate p, .booking-ref p, .flight-name p, .reach-time p, .price p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.flight-route .from-to {
+  margin-bottom: 10px;
+}
+
+.flight-route .location {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.sequence-no strong, .services strong {
+  margin-top: 20px;
+  display: block;
+}
+
+.services p {
+  font-size: 14px;
+  color: #777;
+}
+
+.reminders {
+  margin-top: 30px;
+}
+
+.reminders h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reminder-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 22%;
+  text-align: center;
+}
+
+.step strong {
+  font-size: 14px;
+  color: #007bff;
+}
+
+.step p {
+  font-size: 12px;
+  color: #777;
+}
+
+.download-button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}

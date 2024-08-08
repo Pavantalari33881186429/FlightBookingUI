@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './cancelScreen.css';
 
 const CancelScreen = () => {
   const { state } = useLocation();
@@ -28,11 +29,10 @@ const CancelScreen = () => {
   }, [bookingId]);
 
   return (
-    <div>
-      <h1>Booking Cancelled</h1>
-      <p>Your booking has been cancelled.</p>
-      <button onClick={() => navigate('/')}>Go to Home</button>
-    </div>
+    <div className="cancelled-container">
+    <h1 className="cancelled-message">Your booking has been cancelled.</h1>
+    <a href="/" className="home-link">Go to Home</a>
+  </div>
   );
 };
 
