@@ -13,14 +13,7 @@ pipeline {
        }
     }
 
-        stage('Install Node.js') {
-            steps {
-                script {
-                    def nodeInstaller = tool name: 'NodeJS', type: 'NodeJSInstallation'
-                    env.PATH = "${nodeInstaller}/bin:${env.PATH}"
-                }
-            }
-        }
+       
 
         stage('Install Dependencies') {
             steps {
